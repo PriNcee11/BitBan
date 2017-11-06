@@ -1,0 +1,20 @@
+<h1>{{ pageTitle }}</h1>
+
+<app-list></app-list>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3" *ngFor="let item of items">
+            <img [src]="item.imageURL" [alt]="item.name" class="img-fluid img-thumbnail">
+            <p>{{ item.nick }}</p>
+            <p>{{ item.name }} {{ item.surname }}</p>
+            <p>{{ item.role }}</p>
+        </div>
+    </div>
+</div>
+
+<div class="text-center">
+    <button class="btn btn-success">{{ viewMoreLabel }}</button>
+</div>
+
+
