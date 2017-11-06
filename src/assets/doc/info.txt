@@ -1,0 +1,20 @@
+Hola Iván!
+
+Esta es la prueba de código que tienes que hacer para Bitban. 
+
+INDICACIONES
+
+Te enviamos la prueba de código, en la que tendrás que maquetar el componente que se muestra en el vídeo. También de adjuntamos unas capturas para que puedas consultar tamaños, dimensiones, etc... Respecto a la tipografía, puedes incorporar una Google Font que sea similar (no es lo importante de la prueba).
+
+La idea es que utilices el Json que adjuntamos, de forma que con el componente JS que crees lo asignes a la plantilla.
+
+Lo que sí nos gustaría es que prestaras especial atención al componente de filtrado alfabético (A, B... Todos), tanto en lo que afecta a la visualización responsive como al trabajo de JS para filtrar los elementos que se visualizan.
+
+El botón ver más que aparece, no hace falta que le des ninguna funcionalidad.
+
+Recuerda que puedes recurrir a cualquier framework o librería que te facilite el trabajo (sin limitación).
+
+
+Con cualquier duda me dices, 
+
+Saludos!
