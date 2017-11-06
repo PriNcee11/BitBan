@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    background: #28292E;
+    color: white;
+    margin: 10px;
+}
+
+.player{
+    width: 320px;
+    height: 427px;
+}
+
+.player-info{
+    position: absolute;
+    bottom: 10px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+p{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+p.nick{
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+p.name{
+    font-size: 1.5em;
+}
+
+p.role>span{
+    border: 1px white solid;
+    border-radius: 20px;
+    padding: 0 10px;
+}
