@@ -25,6 +25,12 @@ li{
     font-weight: bold;
 }
 
+.active{
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
 .animated {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;

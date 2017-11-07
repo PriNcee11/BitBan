@@ -3,7 +3,7 @@
 <!-- <app-list></app-list> -->
 <ul>
     <li *ngFor="let term of serie">
-        <button class="nobutton" [class.withData]="serieAux[term]" (click)="setFilter(term)">{{ term }}</button>
+        <button class="nobutton" [class.withData]="serieAux[term]" [class.active]="term==filter" (click)="setFilter(term)">{{ term }}</button>
     </li>
     <li><button class="btn btn-success" (click)="setFilter('')">Ver Todos</button></li>
 </ul>
