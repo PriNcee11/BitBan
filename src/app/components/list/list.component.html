@@ -1,3 +1,5 @@
 <ul>
-    <li *ngFor="let term of serie">{{ term }}</li>
+    <li *ngFor="let term of serie">
+        <button (click)="setFilter(term)" name="filter">{{ term }}</button>
+    </li>
 </ul>

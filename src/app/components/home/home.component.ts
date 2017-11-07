@@ -18,8 +18,6 @@ export class HomeComponent implements OnInit{
     constructor( private _dataService: DataService, private _sanitizer: DomSanitizer ) {}
 
     ngOnInit() {
-        //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-        //Add 'implements OnInit' to the class.
         this._dataService.getData().subscribe( data => {
             this.items = this.sanitizeUrls(data.items);
             this.pageTitle = data.pageTitle;
