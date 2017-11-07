@@ -26,7 +26,15 @@ export class HomeComponent implements OnInit{
             this.items = this.sanitizeUrls(data.items);
             this.pageTitle = data.pageTitle;
             this.viewMoreLabel = data.viewMoreLabel;
-<<<<<<< HEAD
+
+            // Make an array that contains the unique first letter of all the objects
+            this.checkValues();
+
+            // Create an array with the filter options
+            this.fillSerie();
+        
+            // Set a default filter
+            this.setFilter(this.filter);
         });        
     }
 
@@ -38,19 +46,6 @@ export class HomeComponent implements OnInit{
         }
 
         return items;
-=======
-
-            // Make an array that contains the unique first letter of all the objects
-            this.checkValues();
-        });
-
-        // Create an array with the filter options
-        this.fillSerie();
-
-        // Set a default filter
-        this.setFilter(this.filter);
-        
->>>>>>> b4958edb9295e6493bd29965a91f44d57efaf3bd
     }
 
     private fillSerie(){

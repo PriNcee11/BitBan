@@ -10,8 +10,7 @@
     
 <div class="container">
     <div class="row">
-<<<<<<< HEAD
-        <div class="col-md-3 col-sm-6" *ngFor="let item of items; let i=index" >
+        <div class="col-md-3 col-sm-6 animated fadeIn fast" *ngFor="let item of items | filtro:filter; let i=index" >
             <div class="player" [style.background-image]="item.imageURL">
                 <div class="player-info">
                     <p class="nick">{{ item.nick }}</p>
@@ -19,16 +18,6 @@
                     <p class="role"><span>{{ item.role }}</span></p>
                 </div>
             </div>
-            <!-- <img [src]="item.imageURL" [alt]="item.name" class="img-fluid img-thumbnail"> -->
-
-=======
-        <div class="col-md-3 animated fadeIn fast" *ngFor="let item of items | filtro:filter">
-            <img [src]="item.imageURL" [alt]="item.name" class="img-fluid img-thumbnail">
-            <p>{{ item.nick }}</p>
-            <p>{{ item.name }} {{ item.surname }}</p>
-            <p>{{ item.role }}</p>
->>>>>>> b4958edb9295e6493bd29965a91f44d57efaf3bd
-        </div>
     </div>
 </div>
 

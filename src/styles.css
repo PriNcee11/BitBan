@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 body{
     background: #28292E;
     color: white;
@@ -35,11 +34,6 @@ p.role>span{
     border: 1px white solid;
     border-radius: 20px;
     padding: 0 10px;
-}
-=======
-/* You can add global styles to this file, and also import other style files */
-body{
-    background: black;
 }
 
 ul{
@@ -97,4 +91,3 @@ li{
 .fadeIn {
     animation-name: fadeIn;
 }
->>>>>>> b4958edb9295e6493bd29965a91f44d57efaf3bd
