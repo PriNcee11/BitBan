@@ -12,16 +12,21 @@ import { DataService } from "../../services/DataService.service";
 export class HomeComponent implements OnInit{
 
     items: any[];
+    serie: any[] = [];
+    serieAux: any[] = [];
     pageTitle: string;
     viewMoreLabel: string;
+    filter: string = "";
 
     constructor( private _dataService: DataService, private _sanitizer: DomSanitizer ) {}
 
     ngOnInit() {
+        // Get the json data from the service
         this._dataService.getData().subscribe( data => {
             this.items = this.sanitizeUrls(data.items);
             this.pageTitle = data.pageTitle;
             this.viewMoreLabel = data.viewMoreLabel;
+<<<<<<< HEAD
         });        
     }
 
@@ -33,8 +38,39 @@ export class HomeComponent implements OnInit{
         }
 
         return items;
+=======
+
+            // Make an array that contains the unique first letter of all the objects
+            this.checkValues();
+        });
+
+        // Create an array with the filter options
+        this.fillSerie();
+
+        // Set a default filter
+        this.setFilter(this.filter);
+        
+>>>>>>> b4958edb9295e6493bd29965a91f44d57efaf3bd
     }
 
+    private fillSerie(){
+        this.serie.push('0-9');
 
+        for(let i=65; i<=90; i++){
+            this.serie.push(String.fromCharCode(i));
+        }
+    }
+
+    private checkValues(){
+        this.items.forEach(element => {
+            if(element.nick != undefined){
+                this.serieAux[element.nick.charAt(0).toUpperCase()] = element.nick.charAt(0).toUpperCase();                
+            }
+        });
+    }
+
+    setFilter(filter: string){
+        this.filter = filter;
+    }
 
 }
