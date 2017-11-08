@@ -4,15 +4,23 @@ body{
     margin: 10px;
 }
 
-.player{
+button{
+    cursor: pointer;
+}
+
+/* .player{
     width: 320px;
     height: 427px;
-}
+} */
 
 .player-info{
     position: absolute;
     bottom: 10px;
     margin: 0 auto;
+    width: 100%;
+}
+
+.player-img{
     width: 100%;
 }
 
@@ -34,27 +42,28 @@ p.role>span{
     border: 1px white solid;
     border-radius: 20px;
     padding: 0 10px;
+    font-size: 1.5em;
 }
 
 ul{
     list-style: none;
+    cursor: default;
 }
 
 li{
     display: inline;
-    margin: 5px;
-    cursor: default;
+    margin: 2px;
 }
 
 .nobutton{
     border: none;
     background: transparent;
-    color: white;
+    color: darkgray;
     cursor: pointer;
 }
 
 .withData{
-    color: darkgray;
+    color: white;
     font-weight: bold;
 }
 
@@ -64,6 +73,21 @@ li{
     border-color: #28a745;
 }
 
+/* Responsive menu */
+.dropdown{
+    margin-bottom: 20px;
+}
+
+.dropdown-menu{
+    width: 100%;
+    background: #727b84;
+}
+
+.dropdown-item{
+    text-align: center;
+}
+
+/* Animation */
 .animated {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;

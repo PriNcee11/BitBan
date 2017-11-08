@@ -1,32 +1,35 @@
 <h1>{{ pageTitle }}</h1>
 
 <!-- <app-list></app-list> -->
-<ul>
-    <li *ngFor="let term of serie">
-        <button class="nobutton" [class.withData]="serieAux[term]" [class.active]="term==filter" (click)="setFilter(term)">{{ term }}</button>
-    </li>
-    <li><button class="btn btn-success" (click)="setFilter('')">Ver Todos</button></li>
-</ul>
+<div class="d-none d-lg-block">
+    <ul>
+        <li *ngFor="let term of serie">
+            <button class="nobutton" [class.withData]="serieAux[term]" [class.active]="term==filter" (click)="setFilter(term)">{{ term }}</button>
+        </li>
+        <li><button class="btn btn-success" (click)="setFilter('')">Ver Todos</button></li>
+    </ul>
+</div>
 
-<div class="dropdown">
+
+<div class="dropdown d-lg-none d-xl-none">
     <button class="btn btn-secondary dropdown-toggle btn-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Dropdown button
+      {{ term }}
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
+      <a *ngFor="let term of serie" class="dropdown-item" (click)="setFilter(term)">{{ term }}</a>
     </div>
-  </div>
+</div>
     
 <div class="container">
     <div class="row">
         <div class="col-md-3 col-sm-6 animated fadeIn fast" *ngFor="let item of items | filtro:filter; let i=index" >
-            <div class="player" [style.background-image]="item.imageURL">
+                <div class="player">
+                <!-- <div class="player" [style.background-image]="item.imageURL"> -->
+                <img class="player-img" [src]="item.imageURL" [alt]="item.name">
                 <div class="player-info">
                     <p class="nick">{{ item.nick }}</p>
-                    <p class="name"><span *ngIf="!item.name">Player {{i}}</span>{{ item.name }} {{ item.surname }}</p>
-                    <p class="role"><span>{{ item.role }}</span></p>
+                    <p class="name"><span *ngIf="!item.name">Player {{ item.id }}</span><span *ngIf="item.name">{{ item.name }} {{ item.surname }}</span></p>
+                    <p class="role"><span *ngIf="!item.role">Rol {{ item.id }}</span><span *ngIf="item.role">{{ item.role }}</span></p>
                 </div>
             </div>
     </div>
