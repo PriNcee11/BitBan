@@ -40,10 +40,12 @@ export class HomeComponent implements OnInit{
 
     sanitizeUrls(items){
         for(let i in items){
+            console.log(items[i]['imageURL']);
             // set default image if player does not have it
-            var url = items[i]['imageURL'] ? items[i]['imageURL'] : 'assets/images/fake-image-player-V.jpg';
+            // var url = items[i]['imageURL'] ? items[i]['imageURL'] : 'assets/images/fake-image-player-V.jpg';
             // items[i]['imageURL'] = this._sanitizer.bypassSecurityTrustResourceUrl(`url(${url})`);
             // items[i]['imageURL'] = this._sanitizer.bypassSecurityTrustStyle(`url(${url})`);
+            items[i]['imageURL'] = items[i]['imageURL'] ? items[i]['imageURL'] : 'assets/images/fake-image-player-V.jpg';
         }
 
         return items;

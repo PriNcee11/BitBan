@@ -13,19 +13,20 @@
 
 <div class="dropdown d-lg-none d-xl-none">
     <button class="btn btn-secondary dropdown-toggle btn-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      {{ term }}
+      {{ viewMoreLabel }} {{ term }}
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a *ngFor="let term of serie" class="dropdown-item" (click)="setFilter(term)">{{ term }}</a>
+        <a *ngFor="let term of serie" class="dropdown-item" [class.withData]="serieAux[term]" [class.active]="term==filter" (click)="setFilter(term)">{{ term }}</a>
+        <a class="dropdown-item" [class.active]="term==''" (click)="setFilter('')">Ver Todos</a>
     </div>
 </div>
     
 <div class="container">
-    <div class="row">
-        <div class="col-md-3 col-sm-6 animated fadeIn fast" *ngFor="let item of items | filtro:filter; let i=index" >
+    <div class="row main-container">
+        <div class="col-md-3 col-sm-6 col-6 animated fadeIn fast " *ngFor="let item of items | filtro:filter; let i=index" >
                 <div class="player">
                 <!-- <div class="player" [style.background-image]="item.imageURL"> -->
-                <img class="player-img" [src]="item.imageURL" [alt]="item.name">
+                <img class="player-img" [src]="item.imageURL">
                 <div class="player-info">
                     <p class="nick">{{ item.nick }}</p>
                     <p class="name"><span *ngIf="!item.name">Player {{ item.id }}</span><span *ngIf="item.name">{{ item.name }} {{ item.surname }}</span></p>

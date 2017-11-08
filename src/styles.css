@@ -8,16 +8,18 @@ button{
     cursor: pointer;
 }
 
-/* .player{
-    width: 320px;
-    height: 427px;
-} */
+.main-container{
+    margin: 20px 0 20px 0;
+}
+
+.player{
+    margin-bottom: 15px;
+}
 
 .player-info{
     position: absolute;
-    bottom: 10px;
-    margin: 0 auto;
-    width: 100%;
+    bottom: 25px;
+    width: 88%;
 }
 
 .player-img{
@@ -45,9 +47,32 @@ p.role>span{
     font-size: 1.5em;
 }
 
+html {
+    font-size: 14px;
+  }
+  
+  @media screen and (min-width: 1920px) {
+    .player-info {
+        font-size: 100%; /* Base font-size of 32px */
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .player-info {
+        font-size: 100%; /* Base font-size of 32px */
+    }
+}
+
+@media screen and (max-width: 975px) {
+    .player-info {
+        font-size: 65%; /* Base font-size of 32px */
+    }
+}
+
 ul{
     list-style: none;
     cursor: default;
+    text-align: center;
 }
 
 li{
@@ -69,7 +94,7 @@ li{
 
 .active{
     color: #fff;
-    background-color: #28a745;
+    background-color: #28a745 !important;
     border-color: #28a745;
 }
 
@@ -81,6 +106,7 @@ li{
 .dropdown-menu{
     width: 100%;
     background: #727b84;
+    cursor: pointer;
 }
 
 .dropdown-item{
