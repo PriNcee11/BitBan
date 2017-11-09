@@ -10,7 +10,7 @@ export class FiltroPipe implements PipeTransform {
     // Return all objects if filter is not set
     if(!filter) return players;
 
-    // Return objects filtered by the pressed filter
+    // Return objects filtered by the selected filter
     return players.filter(p => { return p.nick.charAt(0).toUpperCase() == filter }); 
   }
 
